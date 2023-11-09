@@ -35,7 +35,7 @@ To install pages in the header use `header_pages` var in `_config.yml`
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at [jekyll-theme-danilov-blog](https://github.com/dan1lov/jekyll-theme-danilov-blog). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://www.contributor-covenant.org/) code of conduct.
+Bug reports and pull requests are welcome on GitHub at [jekyll-danilov-blog](https://github.com/dan1lov/jekyll-danilov-blog). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](https://www.contributor-covenant.org/) code of conduct.
 
 ## License
 
