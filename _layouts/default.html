@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+    {%- include head.html -%}
+
+    <body>
+        <div class="wrapper">
+            {%- include header.html -%}
+
+            <section class="container container_{{page.layout}}">
+                {{ content }}
+            </section>
+        </div>
+
+        <script
+            type="text/javascript"
+            src="/assets/js/theme-listener.js"
+        ></script>
+    </body>
+</html>

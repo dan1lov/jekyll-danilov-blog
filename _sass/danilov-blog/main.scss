@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap&family=Roboto+Mono:wght@300;400;500;600&display=swap");
+
+// variables
+$light__color-background: #f7f7ff;
+$light__color-primary-hex: #141414;
+$light__color-primary-rgb: 20, 20, 20;
+$light__color-accent-hex: #007fff;
+$light__color-accent-rgb: 0, 127, 255;
+
+$dark__color-background: #141414;
+$dark__color-primary-hex: #e6e6e6;
+$dark__color-primary-rgb: 230, 230, 230;
+$dark__color-accent-hex: #cc5a33;
+$dark__color-accent-rgb: 204, 90, 51;
+
+$fontFamilyMain: "Roboto Mono", sans-serif;
+$fontFamilyPost: "Open Sans", $fontFamilyMain;
+$transitionOptions: all 0.3s ease-out;
+
+:root[data-theme="light"] {
+    --color-accent-hex: #{$light__color-accent-hex};
+    --color-accent-rgb: #{$light__color-accent-rgb};
+    --color-background: #{$light__color-background};
+    --color-primary-hex: #{$light__color-primary-hex};
+    --color-primary-rgb: #{$light__color-primary-rgb};
+    --theme-switcher-iterations: 0;
+}
+
+:root[data-theme="dark"] {
+    --color-accent-hex: #{$dark__color-accent-hex};
+    --color-accent-rgb: #{$dark__color-accent-rgb};
+    --color-background: #{$dark__color-background};
+    --color-primary-hex: #{$dark__color-primary-hex};
+    --color-primary-rgb: #{$dark__color-primary-rgb};
+    --theme-switcher-iterations: 0;
+}
+
+// default
+body {
+    background: var(--color-background);
+    color: var(--color-primary-hex);
+    font-family: $fontFamilyMain;
+    transition: $transitionOptions;
+}
+
+:root[data-theme="dark"] img[src*=".svg"] {
+    filter: invert(100%) sepia(0%) saturate(5880%) hue-rotate(297deg)
+        brightness(119%) contrast(80%);
+}
+
+// classes
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 10vh auto;
+    max-width: 80vw;
+    position: relative;
+    width: 620px;
+}

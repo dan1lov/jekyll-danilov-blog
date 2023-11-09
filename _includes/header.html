@@ -1,0 +1,24 @@
+{%- assign page_paths = site.header_pages | default: default_paths -%}
+
+<header class="header">
+    {%- for path in page_paths -%}
+        {%- assign my_page = site.pages | where: 'path', path | first -%}
+        {% assign current_page = page.url | downcase | split: '/' %}
+        {% assign parent_page = my_page.url | downcase | split: '/' %}
+        {%- if my_page.header_title -%}
+            <div class="header__item">
+                <a
+                    href="{{ my_page.url | relative_url }}"
+                    class="header__link{% if current_page[1] == parent_page[1] %} header__link_active{% endif %}"
+                >
+                    {{ my_page.header_title | escape }}
+                </a>
+            </div>
+        {%- endif -%}
+    {%- endfor -%}
+
+    <div id="theme-switcher" class="header__item theme-switcher">
+        <img alt="" src="/assets/icons/sun.svg" class="theme-switcher__light">
+        <img alt="" src="/assets/icons/moon.svg" class="theme-switcher__dark">
+    </div>
+</header>

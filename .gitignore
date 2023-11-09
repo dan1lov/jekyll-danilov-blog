@@ -1,0 +1,12 @@
+/*
+
+!.gitignore
+!README.md
+
+**/.DS_store
+**.log
+
+!_layouts
+!_includes
+!_sass
+!assets
