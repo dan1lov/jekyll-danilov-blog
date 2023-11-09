@@ -2,6 +2,8 @@
 
 !.gitignore
 !README.md
+!Gemfile
+!danilov-blog.gemspec
 
 **/.DS_store
 **.log
